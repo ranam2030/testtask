@@ -11,6 +11,7 @@ class confirmPage {
     async successMessage(){
         const message = (await this.successfullOrderMessage).getText();
         console.log(message);
+        return message;
     }
 }
 export default new confirmPage();

@@ -117,7 +117,8 @@ When(/^Mike click confirm button to place the order$/, async()=>{
 
 
 Then(/^Verify order place successfully with popup message "Your order has been successfully processed!"$/, async()=>{
-   await confirmPage.successMessage();
+   let message = await confirmPage.successMessage();
+   await expect(message).toHaveText('Your order has been successfully processed!');
 });
 
 
