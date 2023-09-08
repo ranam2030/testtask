@@ -9,5 +9,8 @@ class shoppingCart {
     async clickCheckOutBtn(){
         (await this.btnCheckOut).click();
     }
+    async clickCheckOutAsGuest(){
+        (await this.btnCheckOutAsAGuest).click();
+    }
 }
 export default new shoppingCart();

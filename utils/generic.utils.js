@@ -19,5 +19,11 @@ class generic {
   async scrollToQuantity(){
     await $('android=new UiScrollable(new UiSelector().scrollable(true)).scrollTextIntoView("Quantity")');
   }
+  async scrollToEnd(){
+    await $('android=new UiScrollable(new UiSelector().scrollable(true)).scrollToEnd(1,5)');
+  }
+  async scrollToCheckMoneyOrder(){
+    await $('android=new UiScrollable(new UiSelector().scrollable(true)).scrollTextIntoView("Check / Money Order")');
+  }
 }
 export default new generic();

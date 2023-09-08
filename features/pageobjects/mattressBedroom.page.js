@@ -14,6 +14,9 @@ class mattressBedroom {
     get cartCounter(){
         return $('//*[@resource-id="com.nopstation.nopcommerce.nopstationcart:id/counterText"]');
     }
+    get cartIcon(){
+        return $('//*[@resource-id="com.nopstation.nopcommerce.nopstationcart:id/counterIcon"]');
+    }
     
     async clickPlusBtnbyTwo(){
         (await this.btnPlus).click();
@@ -24,6 +27,9 @@ class mattressBedroom {
     async cardCounterText(){
         const counterNumber = await this.cardCounterText.getText();
         return counterNumber;
+    }
+    async clickCartIcon(){
+        await this.cartIcon.click();
     }
 }
 export default new mattressBedroom();
